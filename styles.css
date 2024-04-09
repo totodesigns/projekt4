@@ -94,6 +94,48 @@ c1{
     letter-spacing: 0.16px;
 }
 
+nav {
+    background-color: pink;
+    width: 100%;
+    display: inline-flex;
+    height: 80px;
+    padding-right: 40px;
+    align-items: center;
+}
+
+.menuitems {
+    width: 100%;
+    display: inline-flex;
+    padding: 0px 40px 0px 24px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+.leftitems {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+}
+
+.leftitems {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+}
+
+.rightitems {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
 #copyright {
     display: flex;
     padding: 10px;
@@ -103,8 +145,6 @@ c1{
     gap: 24px;
     align-self: stretch;
 }
-
-
 
 /* FOOTER CSS*/ 
 
