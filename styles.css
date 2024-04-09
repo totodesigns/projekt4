@@ -1,3 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 :root{
     --PHover:#F3DB00;
     --P100:#FEE507;
@@ -11,6 +17,7 @@
     --N5:#333333;
     --N6:#272727;
     --N7:#000000;
+    font-family: "franklin-gothic-atf", sans-serif;
 }
 
 body {
@@ -18,61 +25,53 @@ body {
 }
 
 footer {
-    display:flex;
     background-color: var(--N7);
+    display: flex;
+    padding: 60px;
+    align-items: flex-start;
+    gap: 32px;
 }
 
 a {
     text-decoration: none;
-    font-family: "Franklin Gothic Book";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
 }
 
 h1{
-    font-family: "Franklin Gothic Medium Cond";
     font-size: 70px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 70px;
 }
 
 h2{
-    font-family: "Franklin Gothic Medium Cond";
     font-size: 56px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 56px;
 }
 
 h3{
-    font-family: "Franklin Gothic Medium Cond";
+
     font-size: 42px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 42px;
 }
 
 h4{
-    font-family: "Franklin Gothic Medium Cond";
+    color: var(--N3, #999);
     font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 36px;
 }
 
 h5{
-    font-family: "Franklin Gothic Medium Cond";
+    font-family: "Franklin Gothic Medium";
     font-size: 20px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 30px;
     letter-spacing: -0.4px;
 }
 
-.p1{
+p1{
     font-family: "Franklin Gothic Book";
     font-size: 28px;
     font-style: normal;
@@ -80,7 +79,7 @@ h5{
     line-height: 44px;
 }
 
-.p2{
+p2{
     font-family: "Franklin Gothic Book";
     font-size: 16px;
     font-style: normal;
@@ -88,11 +87,9 @@ h5{
     line-height: 24px;
 }
 
-.c1{
-    font-family: "Franklin Gothic Demi";
+c1{
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px; 
     letter-spacing: 0.16px;
 }
@@ -149,4 +146,84 @@ nav {
     align-self: stretch;
 }
 
+/* FOOTER CSS*/ 
 
+.entirefooter {
+    width: 100%;
+    justify-content: center;
+}
+
+footer > .entirefooter {
+    background-color: var(--N7);
+    display: flex;
+    padding: 60px;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+footer > .entirefooter > .footercolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+footer > .entirefooter > .footercolumn > h4 {
+    color: var(--N3, #999);
+    font-size: 28px;
+    font-weight: 500;
+    /* letter-spacing: -0.5px; */
+    line-height: 36px;
+}
+
+footer > .entirefooter > .footercolumn > c1  {
+    color: var(--N1)
+}
+
+footer > .entirefooter > .footercolumn >.footerlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+footer > .entirefooter > .footercolumn >.footerlinks > a {
+    color:var(--N1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+footer > .entirefooter > .footercolumn >.contactinfo > p2 {
+    color:var(--N1);
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    gap: 24px;
+}
+
+footer > .entirefooter > .footerbottomrow {
+    display: flex;
+    width: 100%;
+}
+.follow {
+    display: flex;
+    align-self: stretch;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+footer > .entirefooter > .footerbottomrow > #copyright{
+    color: var(--N3, #999);
+    font-family: "Franklin Gothic Book";
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .entirefooter > .footerbottomrow > #some {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
