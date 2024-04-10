@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav> <!-- TONNY -->
-        <img src="amnestylogo.png">
+        <img src="images/amnestylogo.png" height="80px">
         <div class="menuitems">
             <div class="leftitems">
                 <span class="c1">Nyheder</span>
@@ -26,11 +26,128 @@
         </div>
         <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #000000;"></i>  
     </nav>
-
     <main>
-
+        <div class="blocks">
+            <div id="hero">
+                <div class="text">
+                    <h1 class="textshadow">Lifeline</h1>
+                    <h3 class="textshadow">Et gratis aktionsnetværk</h3>
+                </div>
+                <button class="primary"><a href="#tilmeldblock" class="c1">Tilmeld dig</a></button>
+            </div>
+            <div class="bgcontent">
+                <div class="infoblock">
+                    <div id="infotext">
+                        <h5>Hvad er Lifeline?</h5>
+                        <p class="p1">Lifeline er Amnestys gratis aktionsnetværk, underskriftsindsamlinger modtages via SMS og/eller email. For at give sin underskrift svarer man enten med ordet AKTION
+                            på SMS eller trykker på en knap i sin modtagne mail. Underskrifterne registreres og bliver efterfølgende brugt til at lægge pres på relevante myndigheder.</p>
+                    </div>
+                    <div id="infoicons">
+                        <hr>
+                        <div class="icons">
+                            <p>icon</p>
+                            <div class="icontext">
+                                <h3>100.000+ Danskere er en del af Lifeline idag</h3>
+                                <p class="p2">Mere end 100.000 danskere er med i vores aktionsnetværk Lifeline. Sammen kan vi hurtigt reagere, når mennesker verden over bliver udsat for overgreb. <br><br> Vi opnår løbende store resultater.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="icons">
+                            <p>icon</p>
+                            <div class="icontext">
+                                <h3>1-2 Beskeder om måneden</h3>
+                                <p class="p2">Tilmeld dig Amnestys gratis aktionsnetværk Lifeline, hvor du kan skrive under på aktuelle hastesager via mail og sms 1-2 gange om måneden.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="icons">
+                            <p>icon</p>
+                            <div class="icontext">
+                                <h3>Afmeld når som helst</h3>
+                                <p class="p2">Du kan til enhver tid tilbagekalde dit samtykke ved at kontakte medlemsservice.Alternativt kan du skrive dit mobilnummer du brugte til at melde dig ind.Når du trykker på Afmeld vil vi stoppe med at sende beskeder.</p>
+                                <button class="tertiary slide-effect">
+                                    <a href="https://amnesty.dk/kontakt-os/spoergsmaal-om-medlemskab/" class="c1">Kontakt medlemsservice</a>
+                                    <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="fix-end">
+                            <button class="primary"><a href="#tilmeldblock" class="c1">Tilmeld dig</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="videoblock">
+                    <h3>Se videoen om, hvad Lifeline er (1 min.)</h3>
+                    <div id="video"></div>
+                </div>
+                <div id="tilmeldblock">
+                    <div id="tilmeldtext">
+                        <div class="text">
+                            <h3>Tilmeld dig Lifeline</h3>
+                            <p class="p2">
+                                Amnesty International har researchere, der indsamler data vedrørende menneskerettighedskrænkelser verden over og vurderer, hvordan vi bedst kan ændre sagens udfald.<br><br>
+                                I løbet af 24 timer kan vi samle flere end 30.000 underskrifter, som afleveres til politikere, embedsmænd, ambassadører eller dommere, og bruges til at lægge pres på relevante myndigheder. Hvis muligheden åbner sig, kan der forekomme personlige møder.
+                            </p>
+                        </div>
+                        <div class="text">
+                            <h4>Hvad kommer der til at ske?</h4>
+                            <ul class="p2">
+                                <li>Du modtager underskriftindsamlinger via mail eller SMS</li>
+                                <li>Det er nemt for dig at skrive under enten ved at trykke på en knap i mailen eller sende en sms retur med ordet AKTION</li>
+                                <li>Vi registrerer din underskrift, og efterfølgende bruger vi de mange underskrifter til at lægge pres på myndighederne. </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="formularblock">
+                        <div id="formular">
+                            <div id="inputs">
+                                <div>
+                                    <label for="fornavn"><p class="p2">Fornavn*</p></label>
+                                    <input type="text" id="fornavn" class="inputbox" placeholder="Anders">
+                                </div>
+                                <div>
+                                    <label for="efternavn"><p class="p2">Efternavn*</p></label>
+                                    <input type="text" id="efternavn" class="inputbox" placeholder="Andersen">
+                                </div>
+                                <div>
+                                    <label for="email"><p class="p2">Email*</p></label>
+                                    <input type="email" id="email" class="inputbox" placeholder="andersandersen@mail.dk">
+                                </div>
+                                <div>
+                                    <label for="mobilnummer"><p class="p2">Mobilnummer*</p></label>
+                                    <div id="mobilinput">
+                                        <div id="land-dropdown">
+                                            <img src ="images/dkflagicon.png" height="24px">
+                                            <i class="fa-solid fa-chevron-down fa-xs"></i>
+                                        </div>
+                                        <input type="tel" id="mobilnummer" class="inputbox" placeholder="00000000">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="inputknapper">
+                            <div class="check">
+                                <input type="checkbox" class="checkbox">
+                                <p class="p2">Jeg ønsker at modtage underskriftsindsamlinger via SMS eller mail. Afmeld til enhver tid ved at kontakte medlemsservice.</p>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" class="checkbox">
+                                <p class="p2">Jeg accepterer Terms of Service og privatlovspolitik. Læs mere om vores persondatapolitik <a href="#" class="hyperlink">her.</a></p>
+                            </div>
+                            <button class="primary" id="strechbtn"><a href="#" class="c1">Tilmeld dig</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgcontentblock">
+                    <div class="text">
+                        <h1 class="textshadow">Det gør en forskel</h1>
+                        <h3 class="textshadow">Dine underskrifter er med til at redde liv</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
     <footer> <!-- DENNIS -->
         <div class="entirefooter">
             
@@ -87,7 +204,7 @@
             <div class="footercolumn">
                 <h4> KONTAKT OS </h4>
                 <div class="contactinfo">
-                    <p2>Amnesty International Danmark<br>
+                    <p class="p2">Amnesty International Danmark<br>
                         Tlf: +45 33 45 66 65<br>
                         Gammeltorv 8, 5. sal, 1457 København K<br>
                         Åbningstider: mandag-torsdag kl. 13:00 - 16:00<br><br>
@@ -100,7 +217,7 @@
             <div class="footerbottomrow">
                 
                 <div id="copyright">
-                        <p2> © 2024 Amnesty International</p2>
+                        <p2 class="p2"> © 2024 Amnesty International</p2>
                 </div>
                 <div class="follow">
                     <h4>FOLLOW US ON:</h4>
