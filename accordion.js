@@ -15,11 +15,11 @@ for (let i = 0; i < acc.length; i++) {
     } else {
 
       // Close all panels and reset borders
-      for (let j = 0; j < panels.length; j++) {
-        panels[j].style.display = "none";
-        acc[j].style.borderBottom = "1px solid";
-        console.log(panels[j]);
-      }
+      // for (let j = 0; j < panels.length; j++) {
+      //   panels[j].style.display = "none";
+      //   acc[j].style.borderBottom = "1px solid";
+      //   console.log(panels[j]);
+      // }
 
       // Open the clicked panel and remove bottom border
       panel.style.display = "block";

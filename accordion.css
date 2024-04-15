@@ -40,7 +40,5 @@
     display: none;
     background-color: inherit;
     overflow: hidden;
-    padding: 16px;
-
-    padding-right: 60px;
+    padding: 0px 60px 16px 16px;
 }

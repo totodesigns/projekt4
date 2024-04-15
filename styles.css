@@ -316,7 +316,7 @@ main {
 .dropdownIndhold a:hover {
     background-color: #999999;
 }
-  
+
 .show {
     display:block;
 }
@@ -324,11 +324,11 @@ main {
 .buttonIndhold {
     display: flex;
     align-items: center; 
+    gap: 8px;
 }
 
-.buttonIndhold img {
-    margin-right: 8px; 
-    margin-top: 3px; 
+#selectedCountry {
+    height: 24px;
 }
 
 .landInfo {
@@ -395,7 +395,8 @@ main {
 .inputbox {
     width: 100%;
     padding: 8px;
-    border: 1px var(--N7) solid;
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px;
     width: 100%;
 }
 #mobilinput {
