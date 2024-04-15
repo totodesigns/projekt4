@@ -636,3 +636,119 @@ footer > .entirefooter > .footerbottomrow > #some {
     gap: 24px;
     align-self: stretch;
 }
+
+.offscreenburger{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .menuitems{
+        display: none;
+    }
+    #searchicon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        gap: 24px;
+    }
+    .offscreenburger{
+        display: flex;
+        width: 100%;
+        padding: 48px 16px;
+        flex-direction: row;
+    
+        gap: 48px;
+        background-color: #FFFFFF;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        transition: .3s ease;
+    }
+
+    #hamburgerlinks{
+        width:100%;
+    }
+
+    #hamburgerchevrons{
+        display:flex;
+        flex-direction: column;
+        font-size: 32px;
+        padding: 85px 24px;
+    }
+
+    #hamburgerchevrons > i{
+        margin-bottom: 22px;
+    }
+
+    .offscreenburger > ul > li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 32px;
+        align-self: stretch;
+        color: #000;
+        list-style-type: none;
+        font-family: "Franklin Gothic";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.36px;
+    }
+
+    .offscreenburger.active{
+        right: 0;
+    }
+    .offscreenburger.active > ul > h2{
+        margin-bottom:72px ;
+        margin-top: -24px;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px;
+    }
+    .mobileburger{
+        display: flex;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        z-index: 999;
+    }
+    .mobileburger span{
+        height: 4px;
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .mobileburger.active {
+        position:fixed;
+    }
+    /* Closed span tags */
+    .mobileburger span:nth-child(1){
+        top: 25%
+    }
+    .mobileburger span:nth-child(3){
+        top: 75%
+    }
+    /* Open span tags */
+    .mobileburger.active span:nth-child(1){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .mobileburger.active span:nth-child(2){
+        opacity: 0;
+    }
+    .mobileburger.active span:nth-child(3){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    }
+    
