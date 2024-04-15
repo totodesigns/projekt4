@@ -122,10 +122,55 @@
                                 <div>
                                     <label for="mobilnummer"><p class="p2">Mobilnummer*</p></label>
                                     <div id="mobilinput">
-                                        <div id="land-dropdown">
-                                            <img src ="images/dkflagicon.png" height="24px">
-                                            <i class="fa-solid fa-chevron-down fa-xs"></i>
-                                        </div>
+                                        <!--Start dropdown-->
+                                        <div>
+                                            <button onclick="landDropdown()" class="dropbtn" id="dropdownButton"> 
+                                                <div class="buttonIndhold">
+                                                    <span id="selectedCountry">
+                                                        <img src="images/flagicon/dkflagicon.png" alt="Denmark flag">
+                                                    </span>
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </button>                                       
+                                                <div id="listDropdown" class="dropdownIndhold">
+                                                    
+                                                    <a href="#" onclick="selectCountry('images/flagicon/dkflagicon.png', event)" >
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/dkflagicon.png" alt="Danmark flag">
+                                                        <p>(+45)</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a id="sverige" href="#" onclick="selectCountry('images/flagicon/seflagicon.png', event)">
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/seflagicon.png" alt="Sverige flag">
+                                                        <p>(+46)</p>
+                                                        </div>
+                                                    </a>
+                            
+                                                    <a href="#" onclick="selectCountry('images/flagicon/noflagicon.png', event)">
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/noflagicon.png" alt="Norge flag">
+                                                        <p>(+47)</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="land" href="#" onclick="selectCountry('images/flagicon/icflagicon.png', event)">
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/icflagicon.png" alt="Island flag">
+                                                        <p>(+354)</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a  href="#" onclick="selectCountry('images/flagicon/fiflagicon.png', event)">
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/fiflagicon.png" alt="Findland flag">
+                                                        <p>(+358)</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                          </div>
+                                          <!--Slut dropdown-->                                          
                                         <input type="tel" id="mobilnummer" class="inputbox" placeholder="00000000">
                                     </div>
                                 </div>
