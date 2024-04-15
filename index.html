@@ -6,10 +6,11 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="accordion.css">
-
+  
     <script src="dropdown.js"></script>
     <script src="accordion.js" defer></script>
-
+    <script src="slider.js"></script>
+  
     <link rel="stylesheet" href="https://use.typekit.net/guu1trq.css">
     <script src="https://kit.fontawesome.com/c80e433044.js" crossorigin="anonymous"></script>
 
@@ -235,6 +236,108 @@
                     </div>
                 </section>
 
+            </div>
+        </div>
+
+        <!--NADIALIVA-->
+        <div class="full-slider">
+
+            <!-- NAV BUTTONS -->
+            <div class="nav-buttons">
+                <button class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-chevron-left fa-xs" style="color: #000000;"></i></button> 
+                <button class="next" onclick="plusSlides(1)"><i class="fa-solid fa-chevron-right fa-xs" style="color: #000000;"></i></button> 
+            </div>
+
+            <!--IMAGES & TEXT-->
+            <div class="slider-contents">  
+
+                <div class="slider">
+
+                    <div class="quote">
+                        <img src="images/vaadin_quote-right.png" alt="quote">
+                    </div>
+
+                    <div class="slider-image">
+                        <img src="images/magai.png" alt="Image">
+                    </div>
+
+                    <div class="slider-text">
+                        <h3>Mange tak. Jeg har ingen ord.
+                            Du har ingen idé om, hvor
+                            meget mit hjerte er fyldt med glæde.</h3>
+                        <h5>- Magai Matiop Ngong</h5>
+                        <p class="p2">Magai Matiop Ngong var kun 15 år, da han blev dømt til døden. Men takket være støtte
+                            fra mennesker som dig, blev hans dødsdom annulleret i juli 2020. Folk over hele
+                            verden skrev under, sendte breve og tweetede, hvor de opfordrede til, at
+                            myndighederne i Sydsudan skulle skåne Magais liv – og det virkede!
+                        </p>
+                        <button class="tertiary slide-effect">
+                            <a href="https://amnesty.dk/om-os/sejre/" class="c1">Se flere resultater</a>
+                            <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="slider">
+
+                    <div class="quote">
+                        <img src="images/vaadin_quote-right.png" alt="quote">
+                    </div>
+
+                    <div class="slider-image">
+                        <img src="images/erika.png" alt="Image">
+                    </div>
+
+                    <div class="slider-text">
+                        <h3>Vi fejrer denne afgørelse som en
+                            historisk sejr ...</h3>
+                        <h5>- Erika Guevara-Rosas</h5>
+                        <p class="p2">Forfatningsdomstolen i Colombia har afgjort, at abort indenfor de første 24 uger af en
+                            graviditet skal afkriminaliseres. En stor sejr for menneskerettighederne, mener
+                            Amnesty International.
+                        </p>
+                        <button class="tertiary slide-effect">
+                            <a href="https://amnesty.dk/om-os/sejre/" class="c1">Se flere resultater</a>
+                            <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="slider">
+
+                    <div class="quote">
+                        <img src="images/vaadin_quote-right.png" alt="quote">
+                    </div>
+
+                    <div class="slider-image">
+                        <img src="images/bernardo.png" alt="Image">
+                    </div>
+
+                    <div class="slider-text">
+                        <h3>Amnesty International gav mig
+                            håb om, at jeg kunne blive
+                            løsladt, og nu er jeg fri.</h3>
+                        <h5>- Bernardo Caal Xol</h5>
+                        <p class="p2">Bernardo Caal Xol, der er miljøforkæmper og en del af det oprindelige folk Mayaerne i
+                            Guatemala, blev idømt syv års fængsel for at protestere mod myndighedernes planer
+                            om at bygge et vandkraftværk på floder der er betydningsfulde for Mayaerne.
+                        </p>
+                        <button class="tertiary slide-effect">
+                            <a href="https://amnesty.dk/om-os/sejre/" class="c1">Se flere resultater</a>
+                            <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--NAV DOTS-->
+            <div class="nav-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
     </main>

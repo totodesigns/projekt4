@@ -451,6 +451,101 @@ input {
     color: var(--N1);
 }
 
+/*SLIDER CSS*/
+
+.full-slider {
+    margin: 40px 0px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 120px;
+    margin-top: 40px;
+    gap: 32px;
+}
+
+.prev, .next {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: #FEE507;
+    border: none;
+    cursor: pointer;
+    font-size: 48px;
+    transition: color 0.3s;
+}
+
+.slider-contents {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 120px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    justify-content: center;
+    gap: 113px;
+}
+
+.quote {
+    position: absolute;
+    right: 120px;
+    margin-top: -60px;
+}
+
+.quote img {
+    width: 240px;
+    height: 240px;
+}
+
+.slider-image {
+    display: flex;
+    width: 500px;
+    height: 360px;
+    position: relative;
+}
+
+.slider-text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.slider-text h5 {
+    display: flex;
+    justify-content: flex-end;
+    margin: 24px;
+}
+
+.slider-text button {
+    margin-top: 24px;
+}
+
+.nav-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #FEE507;
+}
+
+
+
 /* FOOTER CSS*/ 
 
 .entirefooter {
