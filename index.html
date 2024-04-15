@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="accordion.css">
+  
+    <script src="dropdown.js"></script>
+    <script src="accordion.js" defer></script>
     <script src="slider.js"></script>
+  
     <link rel="stylesheet" href="https://use.typekit.net/guu1trq.css">
     <script src="https://kit.fontawesome.com/c80e433044.js" crossorigin="anonymous"></script>
 
@@ -99,7 +105,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="formularblock">
+                <div id="formularblock">
                         <div id="formular">
                             <div id="inputs">
                                 <div>
@@ -117,10 +123,55 @@
                                 <div>
                                     <label for="mobilnummer"><p class="p2">Mobilnummer*</p></label>
                                     <div id="mobilinput">
-                                        <div id="land-dropdown">
-                                            <img src ="images/dkflagicon.png" height="24px">
-                                            <i class="fa-solid fa-chevron-down fa-xs"></i>
-                                        </div>
+                                        <!--Start dropdown-->
+                                        <div>
+                                            <button onclick="landDropdown()" class="dropbtn" id="dropdownButton"> 
+                                                <div class="buttonIndhold">
+                                                    <span id="selectedCountry">
+                                                        <img src="images/flagicon/dkflagicon.png" alt="Denmark flag">
+                                                    </span>
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </button>                                       
+                                                <div id="listDropdown" class="dropdownIndhold">
+                                                    
+                                                    <a href="#" onclick="selectCountry('images/flagicon/dkflagicon.png', event)" >
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/dkflagicon.png" alt="Danmark flag">
+                                                        <p>(+45)</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a id="sverige" href="#" onclick="selectCountry('images/flagicon/seflagicon.png', event)">
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/seflagicon.png" alt="Sverige flag">
+                                                        <p>(+46)</p>
+                                                        </div>
+                                                    </a>
+                            
+                                                    <a href="#" onclick="selectCountry('images/flagicon/noflagicon.png', event)">
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/noflagicon.png" alt="Norge flag">
+                                                        <p>(+47)</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="land" href="#" onclick="selectCountry('images/flagicon/icflagicon.png', event)">
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/icflagicon.png" alt="Island flag">
+                                                        <p>(+354)</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a  href="#" onclick="selectCountry('images/flagicon/fiflagicon.png', event)">
+                                                        <div class="landInfo">
+                                                        <img src="images/flagicon/fiflagicon.png" alt="Findland flag">
+                                                        <p>(+358)</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                          </div>
+                                          <!--Slut dropdown-->                                          
                                         <input type="tel" id="mobilnummer" class="inputbox" placeholder="00000000">
                                     </div>
                                 </div>
@@ -137,7 +188,7 @@
                             </div>
                             <button class="primary" id="strechbtn"><a href="#" class="c1">Tilmeld dig</a></button>
                         </div>
-                    </div>
+                </div>
                 </div>
                 <div class="imgcontentblock">
                     <div class="text">
@@ -145,6 +196,46 @@
                         <h3 class="textshadow">Dine underskrifter er med til at redde liv</h3>
                     </div>
                 </div>
+
+                <!-- TONNY ACCORDION -->
+                <section class="accordionblock">
+                    <div class="content">
+                        <h2>Spørgsmål og svar</h2>
+                        <div class="accordions">
+                            <button class="accordion" id="top"><h5>Jeg har skrevet under to gange. Får myndighederne så flere af den samme underskrift?</h5><i class="fa-solid fa-plus"></i></button>
+                                <div class="panel">
+                                    <p class="p2">Vi tjekker altid underskrifterne igennem for dubletter, så der kun sendes én pr unik underskriver, så det gør hverken fra eller til, hvis du skriver under to gange.</p>
+                                </div>                            
+                            <button class="accordion"><h5>Hvordan kan jeg undgå at blive ringet op bagefter?</h5><i class="fa-solid fa-plus"></i></button>
+                                <div class="panel">
+                                    <p class="p2">Vi har brug for at kunne identificere dig som unik underskriver. Derfor har vi valgt at bruge e-mail og telefonnummer som identifikation på alle Amnestys formularer. Nederst i formularen er der et permission-felt. Hvis du ikke sætter flueben her, bliver du ikke kontaktet mere.</p>
+                                </div>
+                            
+                            <button class="accordion"><h5>Hvorfor skal jeg acceptere nødvendige cookies?</h5><i class="fa-solid fa-plus"></i></button>
+                                <div class="panel">
+                                    <p class="p2">Nogle bruges til statistik, mens andre er fra tredjepartstjenester. Vi benytter cookies for at optimere hjemmesiden og brugsvenligheden for alle.</p>
+                                </div>
+                            
+                            <button class="accordion"><h5>Hvorfor modtager jeg aktioner via mail, når jeg tidligere har modtaget dem på sms?</h5><i class="fa-solid fa-plus"></i></button>
+                                <div class="panel">
+                                    <p class="p2">Når du vælger at få aktionerne via e-mail, får du mere information om dem, vi aktionerer for. Du får også mere information om, hvad der sker med din underskrift og hvilke resultater din underskrift er med til at skabe for menneskerettighederne.
+
+                                        Samtidig sparer vi en masse penge på sms’er, som vi i stedet kan bruge på at undersøge krænkelser og påvirke magthavere til at overholde menneskerettighederne. Det koster nemlig 19 øre, hver gang vi sender en sms, og når vi sender ud til omkring 200.000 personer, så løber det hurtigt op. Derfor vil vi hellere sende aktionerne via mail, hvor det er gratis.</p>
+                                </div>
+                            
+                            <button class="accordion"><h5>Hvordan afmelder jeg mig Lifeline?</h5><i class="fa-solid fa-plus"></i></button>
+                                <div class="panel">
+                                    <p class="p2">Du kan vælge at ringe eller skrive til medlemsservice. Ved at oplyse dit mobilnummer eller mailadresse får de dig fjernet fra listen.</p><br>
+                                    <button class="tertiary slide-effect">
+                                        <a href="https://amnesty.dk/kontakt-os/spoergsmaal-om-medlemskab/" class="c1">Kontakt medlemsservice</a>
+                                        <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
+                                    </button>
+                                </div>
+                        </div>
+
+                    </div>
+                </section>
+
             </div>
         </div>
 
