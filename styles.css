@@ -265,7 +265,7 @@ main {
 }
 .icontext {
     display: flex;
-    width: 493px;
+    width: 50%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
