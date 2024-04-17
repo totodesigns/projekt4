@@ -1061,6 +1061,10 @@ footer > hr {
 
     .primary {
         width: 100%;
+        box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    }
+    .primary > p {
+        text-align: center;
     }
 
     #hero {
@@ -1101,7 +1105,7 @@ footer > hr {
     }
 
     .videoblock {
-        padding: 24px 16px;
+        padding: 40px 16px;
     }
 
     #videoframe {
@@ -1118,7 +1122,12 @@ footer > hr {
         gap: 24px;
     }
 
+    #successcontent {
+        padding: 16px;
+    }
+
     .imgcontentblock {
+        height: 500px;
         padding: 40px 16px;
     }
     .imgcontentblock > .text {
