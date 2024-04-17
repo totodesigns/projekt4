@@ -1,8 +1,8 @@
-const mobileburger = document.querySelector('.mobileburger');
-const offscreenburger = document.querySelector('.offscreenburger');
+    let popupSuccess = document.getElementById("success").classList;
 
-mobileburger.addEventListener('click',() => {
-    offscreenburger.classList.toggle('active');
-    mobileburger.classList.toggle('active');
-})
-
+function openPopupSuccess(){
+    popupSuccess.add("successopen");
+}
+function closePopupSuccess(){
+    popupSuccess.remove("successopen");
+}

@@ -8,12 +8,10 @@ function landDropdown(event) {
     console.log("Dropdown button clicked!");
     let dropdownIndhold = document.getElementById("listDropdown");
     dropdownIndhold.classList.toggle("show");
-    event.stopPropagation();
 }
 
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
-        console.log("working");
         let dropdowns = document.getElementsByClassName("dropdownIndhold");
         for (let i = 0; i < dropdowns.length; i++) {
             const openDropdown = dropdowns[i];

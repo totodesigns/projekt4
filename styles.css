@@ -29,17 +29,23 @@ hr {
 .primary {
     width: fit-content;
     padding: 12px 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     background: var(--P100);
+    border: none;
+    cursor: pointer;
+}
+.primarywhite {
+    width: 100%;
+    padding: 12px 24px;
+    gap: 10px;
+    background: var(--N1);
     border: none;
     cursor: pointer;
 }
 .primary:hover {
     background: var(--PHover);
 }
+
 .tertiary {
     background: none;
     border: none;
@@ -55,24 +61,20 @@ hr {
 }
 @keyframes hover {
     from {
-        box-shadow: inset 0 0 0 0.01px var(--P100);
         transform: translateX(0px);
         padding: 4px 0px;
     }
     to {
-        box-shadow: inset 17em 0 0 0.01px var(--P100);
         transform: translateX(4px);
         padding: 4px 8px;
     }
 }
 @keyframes leave {
     from {
-        box-shadow: inset -17em 0 0 0.01px var(--P100);
         transform: translateX(4px);
         padding: 4px 8px;
     }
     to {
-        box-shadow: inset 0 0 0 0.01px var(--P100);
         transform: translateX(0px);
         padding: 4px 0px;
     }
@@ -87,6 +89,11 @@ footer {
 
 a {
     text-decoration: none;
+    font-family: "Franklin Gothic Book";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
     color: inherit;
 }
 
@@ -147,21 +154,24 @@ h5{
     font-weight: 500;
     line-height: 24px; 
     letter-spacing: 0.16px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 /* NAVBAR CSS*/ 
 
 nav {
+    background-color: var(--N1);
     width: 100%;
-    display: inline-flex;
+    display: flex;
     height: 80px;
     padding-right: 40px;
     align-items: center;
+    z-index: 2;
 }
 
 .menuitems {
     width: 100%;
+    height: 100%;
     display: inline-flex;
     padding: 0px 40px;
     justify-content: flex-end;
@@ -186,6 +196,10 @@ nav {
 
 /* MAIN CSS*/ 
 
+nav > a {
+    height: 100%;
+}
+
 main {
     display: flex;
     padding-bottom: 120px;
@@ -201,14 +215,11 @@ main {
 
 #hero {
     /* FROM FIGMA */
-    background: 
-        radial-gradient(831.94% 118.94% at 0% 83.7%,
-        rgba(0, 0, 0, 0.80) 38.39%,
-        rgba(255, 255, 255, 0.00) 100%),
-        url(images/heroimage.jpg)
-        lightgray 0px -325.75px / 100% 230.3% no-repeat;
+    background: radial-gradient(831.94% 118.94% at 0% 83.7%, rgba(0, 0, 0, 0.80) 38.39%, rgba(255, 255, 255, 0.00) 100%), url(images/heroimage.jpg) lightgray 0px -325.75px / 100% 230.3% no-repeat;
 
-    object-fit: cover;
+    background-size: cover;
+    background-position: 50%;
+
     width: 100%;
     height: 700px;
     padding: 60px 120px;
@@ -228,6 +239,7 @@ main {
 #textshadow {
     text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.40);
 }
+
 #hero > .text > h1, #hero > .text > h3 {
     color: var(--N1);
 }
@@ -249,7 +261,7 @@ main {
 }
 #infotext > h5 {
     width: fit-content;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 #infoicons {
     display: flex;
@@ -263,6 +275,10 @@ main {
     align-items: flex-start;
     gap: 53px;
 }
+.icons > i {
+    padding-top: 24px;
+}
+
 .icontext {
     display: flex;
     width: 50%;
@@ -270,6 +286,192 @@ main {
     justify-content: center;
     align-items: flex-start;
     gap: 32px;
+}
+
+#fix-end {
+    display: inline-flex;
+    justify-content: flex-end; 
+}
+.videoblock {
+    background-color: var(--N2);
+    display: flex;
+    padding: 80px 332px;
+    gap: 40px;
+    flex-direction: column;
+}
+
+#videoframe {
+    width: 100%;
+    height: 570px;
+}
+
+#tilmeldblock {
+    display: flex;
+    padding: 60px 120px;
+    gap: 214px;
+    justify-content: space-between;
+}
+#tilmeldtext {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.text > ul {
+    padding-left: 16px;
+}
+
+#formularblock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+#formular {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+#inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.inputbox {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px;
+    width: 100%;
+}
+
+#oplysninger {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#oplysningericons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.oplysicon {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#mobilinput {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    width: 100%;
+}
+
+input {
+    font-family: "Franklin Gothic Book";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+#inputknapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+.check {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+
+.checkbox {
+    width: 16px;
+}
+
+#stretch {
+    width: 100%;
+}
+#stretch > p {
+    text-align: center;
+}
+
+/* SUCCESS POPUP */
+.success {
+    background-color: var(--N1);
+    box-shadow: 4px 6px 50px 0px rgba(0, 0, 0, 0.30);
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100px;
+    height: fit-content;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+
+    visibility: hidden;
+}
+
+.successopen {
+    visibility: visible;
+}
+
+#successcheck {
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--P100);
+}
+
+#successcontent {
+    width: 100%;
+    padding: 60px 0px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#successtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#successtext > h2 {
+    text-align: center;
+}
+
+.imgcontentblock {
+    /* FROM FIGMA */
+    background: 
+    radial-gradient(564.74% 267.44% at 6.67% 201.44%,
+    rgba(0, 0, 0, 0.70) 45.62%, rgba(255, 255, 255, 0.00) 100%),
+    url(images/bannerblockimg.jpg)lightgray -2.369px -416.041px / 135.486% 168.877% no-repeat;
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 700px;
+    padding: 60px 120px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bgcontent > .imgcontentblock > .text > h1, .bgcontent > .imgcontentblock > .text > h3 {
+    color: var(--N1);
 }
 
 /* DROP DOWN */
@@ -347,110 +549,6 @@ main {
     margin-left: 8px;
 }
 
-/* DROP DOWN END */
-
-#fix-end {
-    display: inline-flex;
-    justify-content: flex-end; 
-}
-.videoblock {
-    display: flex;
-    padding: 60px 120px;
-    gap: 40px;
-    flex-direction: column;
-}
-#video {
-    height: 570px;
-    background-color: #DDDDDD;
-}
-
-#tilmeldblock {
-    display: flex;
-    padding: 60px 120px;
-    gap: 214px;
-    justify-content: space-between;
-}
-#tilmeldtext {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    width: 100%;
-}
-#formularblock {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-#formular {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-#inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.inputbox {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    box-shadow: inset 0px 0px 0px 1px;
-    width: 100%;
-}
-#mobilinput {
-    display: flex;
-    gap: 12px;
-    align-items: flex-end;
-    width: 100%;
-}
-
-
-input {
-    font-family: "Franklin Gothic Book";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-}
-#inputknapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-}
-.check {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
-}
-#strechbtn {
-    width: 100%;
-}
-
-.imgcontentblock {
-    /* FROM FIGMA */
-    background: 
-    radial-gradient(564.74% 267.44% at 6.67% 201.44%,
-     rgba(0, 0, 0, 0.70) 45.62%, rgba(255, 255, 255, 0.00) 100%),
-      url(images/bannerblockimg.jpg)lightgray -2.369px -416.041px / 135.486% 168.877% no-repeat;
-
-    object-fit: none;
-    width: 100%;
-    height: 700px;
-    padding: 60px 120px;
-    gap: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.bgcontent > .imgcontentblock > .text > h1, .bgcontent > .imgcontentblock > .text > h3 {
-    color: var(--N1);
-}
-
 /*SLIDER CSS*/
 
 .full-slider {
@@ -466,27 +564,48 @@ input {
 }
 
 .prev, .next {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 48px;
     height: 48px;
     background: #FEE507;
     border: none;
     cursor: pointer;
     font-size: 48px;
-    transition: color 0.3s;
+    animation: up 0.3s forwards;
+}
+
+.prev:hover, .next:hover {
+    background: var(--PHover);
+    animation: down 0.2s forwards;
+}
+
+@keyframes down {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(3px);
+    }
+}
+@keyframes up {
+    from {
+        transform: translateY(3px);
+    }
+    to {
+        transform: translateY(0px);
+    }
 }
 
 .slider-contents {
     display: flex;
     flex-direction: column;
-    margin: 60px 120px;
+    padding: 60px 120px;
 }
 
 .slider {
-    display: flex;
-    flex-direction: row;
     margin-top: 60px;
-    justify-content: center;
     gap: 113px;
 }
 
@@ -494,30 +613,37 @@ input {
     position: absolute;
     right: 120px;
     margin-top: -60px;
-}
-
-.quote img {
     width: 240px;
     height: 240px;
+    opacity: 70%;
+    z-index: 0;
+}
+.quote img {
+    width: 100%;
+    height: 100%;
 }
 
 .slider-image {
-    display: flex;
     width: 500px;
     height: 360px;
-    position: relative;
+    z-index: 1;
 }
 
 .slider-text {
     display: flex;
     flex-direction: column;
-    position: relative;
+    z-index: 1;
+    gap: 24px;
 }
 
 .slider-text h5 {
     display: flex;
     justify-content: flex-end;
-    margin: 24px;
+    z-index: 1;
+}
+
+.slider-text h3 {
+    z-index: 1;
 }
 
 .slider-text button {
@@ -537,64 +663,146 @@ input {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.3s ease;
 }
 
 .active, .dot:hover {
     background-color: #FEE507;
 }
 
+/* ACCORDION */
 
+.accordionblock {
+    padding: 60px 120px;
+    align-items: center;
+}
 
-/* FOOTER CSS*/ 
+.accordion > p {
+    margin-bottom: 0.4em;
+}
+
+.accordionblock > .content > .text {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    padding: 60px 89px;
+    background-color: var(--P50);
+}
+
+.accordions {
+    border-top: 1px solid var(--N5);
+    width: 100%;
+}
+
+.accordion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border-width: 0px 0px 1px 0px;
+    padding: 16px;
+    gap: 24px;
+    border-bottom: 1px solid var(--N5);
+}
+
+.accordion > h5 {
+    text-align: left;
+}
+.content > h2 {
+    text-align: center;
+}
+
+#top {
+    border-width: 1px 0px 1px 0px;
+}
+
+.panel {
+    display: none;
+    background-color: inherit;
+    overflow: hidden;
+    padding: 0px 60px 16px 16px;
+    border-bottom: 1px solid var(--N5);
+}
+
+/* FOOTER */ 
 
 .entirefooter {
     width: 100%;
     justify-content: center;
 }
 
-footer > .entirefooter {
+footer {
     background-color: var(--N7);
     display: flex;
+    flex-direction: column;
     padding: 60px;
     align-items: flex-start;
-    gap: 32px;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
-footer > .entirefooter > .footercolumn {
+.footertoprow {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.footercolumn {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-   
+    gap: 24px;
+    flex: 1 0 0;
+    align-self: stretch;
 }
 
-footer > .entirefooter > .footercolumn > h4 {
+.footercolumn > hr {
+    border: 1px solid var(--N6);
+    width: 100%;
+    height: 0px;
+}
+footer > hr {
+    border: 1px solid var(--N6);
+    width: 100%;
+}
+
+.footercolumn > h4 {
     color: var(--N3, #999);
     font-size: 28px;
     font-weight: 500;
     /* letter-spacing: -0.5px; */
     line-height: 36px;
+    white-space: nowrap;
 }
 
-footer > .entirefooter > .footercolumn > c1  {
+.footercolumn > .c1  {
     color: var(--N1)
 }
 
-footer > .entirefooter > .footercolumn >.footerlinks {
+.footerlinks {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 12px;
 }
 
-footer > .entirefooter > .footercolumn >.footerlinks > a {
+.footerlinks > a {
     color:var(--N1);
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-footer > .entirefooter > .footercolumn >.contactinfo > p2 {
+.footercolumn > .p2 {
     color:var(--N1);
     display: flex;
     flex-direction: column;
@@ -602,18 +810,26 @@ footer > .entirefooter > .footercolumn >.contactinfo > p2 {
     gap: 24px;
 }
 
-footer > .entirefooter > .footerbottomrow {
+.footerbottomrow {
     display: flex;
     width: 100%;
+    gap: 32px;
 }
 .follow {
     display: flex;
-    align-self: stretch;
+    align-items: center;
     width: 100%;
     justify-content: flex-end;
+    gap: 32px;
 }
 
-footer > .entirefooter > .footerbottomrow > #copyright{
+.follow > h4 {
+    color: var(--N1 );
+}
+ 
+.footerbottomrow > .p2 {
+    white-space: nowrap;
+    width: fit-content;
     color: var(--N3, #999);
     font-family: "Franklin Gothic Book";
     font-size: 16px;
@@ -621,28 +837,59 @@ footer > .entirefooter > .footerbottomrow > #copyright{
     flex-direction: column;
 }
 
-footer > .entirefooter > .footerbottomrow > #some {
+#some {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-#copyright {
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 24px;
-    align-self: stretch;
+    gap: 32px;
+    align-items: center;
 }
 
 .offscreenburger{
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
+    .icontext {
+        width: 100%;
+    }
 
+    #tilmeldblock {
+        gap: 100px;
+    }
+
+    .videoblock {
+        padding: 60px 120px;
+    }
+
+    .slider-contents {
+        padding-top: 24px;
+    }
+
+    .slider-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider-image > img {
+        width: 100%;
+    }
+
+    .slider {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12px;
+        gap: 40px;
+    }
+
+    .quote {
+        width: 200px;
+        height: 200px;
+        margin-top: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    /* BURGER MENU */
     .menuitems{
         display: none;
     }
@@ -653,13 +900,15 @@ footer > .entirefooter > .footerbottomrow > #some {
         width: 100%;
         gap: 24px;
     }
-    .offscreenburger{
+    .offscreenburger {
         display: flex;
+        flex-direction: column;
+
+        gap: 60px;
+
         width: 100%;
-        padding: 48px 16px;
-        flex-direction: row;
-    
-        gap: 48px;
+        padding: 20px 16px;
+
         background-color: #FFFFFF;
         height: 100vh;
         position: fixed;
@@ -669,54 +918,42 @@ footer > .entirefooter > .footerbottomrow > #some {
     }
 
     #hamburgerlinks{
-        width:100%;
-    }
-
-    #hamburgerchevrons{
-        display:flex;
+        display: flex;
         flex-direction: column;
-        font-size: 32px;
-        padding: 85px 24px;
-    }
-
-    #hamburgerchevrons > i{
-        margin-bottom: 22px;
+        width:100%;
+        gap: 40px;
     }
 
     .offscreenburger > ul > li {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        margin-bottom: 32px;
-        align-self: stretch;
-        color: #000;
         list-style-type: none;
-        font-family: "Franklin Gothic";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0.36px;
+    }
+
+    .offscreenburger > ul > li > a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding: 0px 8px;
+    }
+
+    .offscreenburger > ul > li > a > h5{
+        width: 100%;
+    }
+    #hamburgerlinks > h2{
+        margin-bottom: 24px;
     }
 
     .offscreenburger.active{
         right: 0;
     }
-    .offscreenburger.active > ul > h2{
-        margin-bottom:72px ;
-        margin-top: -24px;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 36px;
-    }
+
     .mobileburger{
         display: flex;
         width: 32px;
         height: 32px;
         position: relative;
         z-index: 999;
+        background-color: var(--N1);
     }
     .mobileburger span{
         height: 4px;
@@ -750,5 +987,218 @@ footer > .entirefooter > .footerbottomrow > #some {
         top: 50%;
         transform: translate(-50%, -50%) rotate(-45deg);
     }
+
+    /* MAIN CSS MOBILE */
+    
+    main {
+        padding-bottom: 60px;
     }
+
+    nav {
+        padding-right: 16px;
+        position: fixed;
+    }
+
+    h1{
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 48px;
+    }
+    
+    h2{
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+    
+    h3{
+    
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 44px;
+    }
+    
+    h4{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+    
+    h5{
+        font-family: "Franklin Gothic Medium";
+        color: var(--N5);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.4px;
+    }
+    
+    .p1{
+        font-family: "Franklin Gothic Book";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px;
+    }
+    
+    .p2{
+        font-family: "Franklin Gothic Book";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    
+    .c1{
+        font-family: "Franklin Gothic Medium";
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px; 
+        letter-spacing: 0.16px;
+        white-space: nowrap;
+    }
+
+    .primary {
+        width: 100%;
+    }
+
+    #hero {
+        gap: 16px;
+        padding: 40px 16px;
+    }
+    .text {
+        gap: 8px;
+    }
+
+    .blocks {
+        gap: 40px;
+    }
+
+    .bgcontent {
+        gap: 40px;
+    }
+
+    .infoblock {
+        padding: 24px 16px;
+    }
+
+    #infotext {
+        flex-direction: column;
+    }
+
+    #infoicons {
+        padding: 0px;
+        gap: 24px;
+    }
+
+    .icons {
+        flex-direction: column;
+    }
+
+    .icontext {
+        width: 100%;
+    }
+
+    .videoblock {
+        padding: 24px 16px;
+    }
+
+    #videoframe {
+        height: 300px;
+    }
+
+    #tilmeldblock {
+        flex-direction: column;
+        padding: 24px 16px;
+        gap: 40px;
+    }
+
+    #tilmeldtext {
+        gap: 24px;
+    }
+
+    .imgcontentblock {
+        padding: 40px 16px;
+    }
+    .imgcontentblock > .text {
+        gap: 16px;
+    }
+
+    .full-slider {
+        padding: 24px 16px;
+        margin: 0px;
+    }
+
+    .slider-contents {
+        padding: 0px;
+    }
+
+    .slider {
+        padding-bottom: 24px;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .quote {
+        width: 132px;
+        height: 132px;
+        margin-right: -100px;
+    }
+
+    .nav-dots {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 8px;
+        width: 100%;
+        border-radius: 0%;
+        margin: 0px;
+        background-color: #bbb;
+        gap: 12px;
+        transition: background-color 0.6s ease;
+    }
+
+    .accordionblock {
+        padding: 24px 16px;
+    }
+    .content {
+        padding: 60px 16px;
+    }
+    .accordion {
+        padding: 16px 8px;
+    }
+    .panel {
+        padding: 0px 60px 16px 8px;
+    }
+
+    footer {
+        padding: 60px 16px;
+    }
+
+    .footercolumn > .p2 {
+        width: 100%;
+    }
+
+    .footerbottomrow {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .follow {
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .footertoprow {
+        flex-direction: column;
+    }
+}
     

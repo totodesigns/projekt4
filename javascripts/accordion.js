@@ -9,24 +9,19 @@ for (let i = 0; i < acc.length; i++) {
     // Toggle display of the clicked panel
     if (panel.style.display === "block") {
       panel.style.display = "none";
-      this.style.borderBottom = "1px solid"; // Set bottom border when closing
+      this.style.borderBottom = "1px solid var(--N5)"; // Set bottom border when closing
       icon.classList.remove("fa-minus"); // Remove the class for the minus icon
       icon.classList.add("fa-plus"); // Add the class for the plus icon
+      console.log("Accordion Closed")
     } else {
-
-      // Close all panels and reset borders
-      // for (let j = 0; j < panels.length; j++) {
-      //   panels[j].style.display = "none";
-      //   acc[j].style.borderBottom = "1px solid";
-      //   console.log(panels[j]);
-      // }
 
       // Open the clicked panel and remove bottom border
       panel.style.display = "block";
-      panel.style.borderBottom = "1px solid";
+      panel.style.borderBottom = "1px solid var(--N5)";
       this.style.borderBottom = "none"; // Remove bottom border for the clicked accordion where "this" represents the accordion button
       icon.classList.remove("fa-plus"); // Remove the class for the plus icon
       icon.classList.add("fa-minus"); // Add the class for the minus icon
+      console.log("Accordion Opened")
     }
   });
 }

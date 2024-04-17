@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles.css">
-<<<<<<< Updated upstream
-    <link rel="stylesheet" href="accordion.css">
   
-    <script src="dropdown.js"></script>
-    <script src="accordion.js" defer></script>
-    <script src="slider.js"></script>
+    <script src="javascripts/dropdown.js" defer></script>
+    <script src="javascripts/accordion.js" defer></script>
+    <script src="javascripts/slider.js" defer></script>
+    <script src="javascripts/burgermenu.js" defer></script>
+
+    <!-- SUCCESS POPUP -->
+    <script src="scripts.js" defer></script>
   
-=======
-   
->>>>>>> Stashed changes
     <link rel="stylesheet" href="https://use.typekit.net/guu1trq.css">
     <script src="https://kit.fontawesome.com/c80e433044.js" crossorigin="anonymous"></script>
 
@@ -22,7 +21,7 @@
 </head>
 <body>
     <nav> <!-- TONNY -->
-        <img src="images/amnestylogo.png" height="80px">
+        <a href="#"><img src="images/amnestylogo.png" height="80" alt="logo" loading="lazy"></a>
         <div class="menuitems">
             <div class="leftitems">
                 <span class="c1">Nyheder</span>
@@ -38,8 +37,6 @@
         <div id="searchicon">
             <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #000000;"></i>
         
-        
-        
             <!-- DENNIS BURGER -->
             
             <div class="mobileburger">
@@ -51,21 +48,14 @@
         </div>
         <div class="offscreenburger"> 
             <!-- ul>li*5 -->
+            <h2>Menu</h2>            
             <ul id="hamburgerlinks">
-                <h2>Menu</h2> 
-                <li><a href="#">Nyheder</a></li>
-                <li><a href="#">Vær med</a></li>
-                <li><a href="#">Vores arbejde</a></li>
-                <li><a href="#">Om os</a></li>
-                <li><a href="#">Kontakt os</a></li>
-            </ul>
-            <ul id="hamburgerchevrons">
-                <i class="fa-solid fa-chevron-down"></i>
-                <i class="fa-solid fa-chevron-down"></i>
-                <i class="fa-solid fa-chevron-down"></i>
-                <i class="fa-solid fa-chevron-down"></i>
-                <i class="fa-solid fa-chevron-down"></i>
 
+                <li><a href="#"><h5>Nyheder</h5></a></li>
+                <li><a href="#"><h5>Vær med</h5><i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#"><h5>Vores arbejde</h5><i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#"><h5>Om os</h5><i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#"><h5>Kontakt os</h5></a></li>
             </ul>
         </div>
     </nav>
@@ -76,7 +66,7 @@
                     <h1 class="textshadow">Lifeline</h1>
                     <h3 class="textshadow">Et gratis aktionsnetværk</h3>
                 </div>
-                <button class="primary"><a href="#tilmeldblock" class="c1">Tilmeld dig</a></button>
+                <a href="#tilmeldblock" class="primary"><p class="c1">Tilmeld dig</p></a>
             </div>
             <div class="bgcontent">
                 <div class="infoblock">
@@ -88,7 +78,7 @@
                     <div id="infoicons">
                         <hr>
                         <div class="icons">
-                            <p>icon</p>
+                            <i class="fa-regular fa-user fa-2xl" style="color: #000000;"></i>
                             <div class="icontext">
                                 <h3>100.000+ Danskere er en del af Lifeline idag</h3>
                                 <p class="p2">Mere end 100.000 danskere er med i vores aktionsnetværk Lifeline. Sammen kan vi hurtigt reagere, når mennesker verden over bliver udsat for overgreb. <br><br> Vi opnår løbende store resultater.</p>
@@ -96,7 +86,7 @@
                         </div>
                         <hr>
                         <div class="icons">
-                            <p>icon</p>
+                            <i class="fa-regular fa-message fa-2xl" style="color: #000000;"></i>
                             <div class="icontext">
                                 <h3>1-2 Beskeder om måneden</h3>
                                 <p class="p2">Tilmeld dig Amnestys gratis aktionsnetværk Lifeline, hvor du kan skrive under på aktuelle hastesager via mail og sms 1-2 gange om måneden.</p>
@@ -104,25 +94,27 @@
                         </div>
                         <hr>
                         <div class="icons">
-                            <p>icon</p>
+                            <i class="fa-solid fa-ban fa-2xl" style="color: #000000;"></i>
                             <div class="icontext">
                                 <h3>Afmeld når som helst</h3>
                                 <p class="p2">Du kan til enhver tid tilbagekalde dit samtykke ved at kontakte medlemsservice.Alternativt kan du skrive dit mobilnummer du brugte til at melde dig ind.Når du trykker på Afmeld vil vi stoppe med at sende beskeder.</p>
-                                <button class="tertiary slide-effect">
+                                <div class="tertiary slide-effect">
                                     <a href="https://amnesty.dk/kontakt-os/spoergsmaal-om-medlemskab/" class="c1">Kontakt medlemsservice</a>
                                     <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
-                                </button>
+                                </div>
                             </div>
                         </div>
                         <hr>
                         <div id="fix-end">
-                            <button class="primary"><a href="#tilmeldblock" class="c1">Tilmeld dig</a></button>
+                            <a href="#tilmeldblock" class="primary"><p class="c1">Tilmeld dig</p></a>
                         </div>
                     </div>
                 </div>
                 <div class="videoblock">
                     <h3>Se videoen om, hvad Lifeline er (1 min.)</h3>
-                    <div id="video"></div>
+                    <div id="videoframe">
+                        <iframe id="videoframe" src="https://www.youtube.com/embed/3WXUUlTrPv4?si=7peIAHevrgR-Kg4J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen alt="Lifeline Video"></iframe>
+                    </div>
                 </div>
                 <div id="tilmeldblock">
                     <div id="tilmeldtext">
@@ -138,94 +130,124 @@
                             <ul class="p2">
                                 <li>Du modtager underskriftindsamlinger via mail eller SMS</li>
                                 <li>Det er nemt for dig at skrive under enten ved at trykke på en knap i mailen eller sende en sms retur med ordet AKTION</li>
-                                <li>Vi registrerer din underskrift, og efterfølgende bruger vi de mange underskrifter til at lægge pres på myndighederne. </li>
+                                <li>Vi registrerer din underskrift, og efterfølgende bruger vi de mange underskrifter til at lægge pres på myndighederne.</li>
                             </ul>
                         </div>
                     </div>
-                <div id="formularblock">
+                    <div id="formularblock">
                         <div id="formular">
                             <div id="inputs">
                                 <div>
-                                    <label for="fornavn"><p class="p2">Fornavn*</p></label>
+                                    <label for="fornavn" class="p2">Fornavn*</label>
                                     <input type="text" id="fornavn" class="inputbox" placeholder="Anders">
                                 </div>
                                 <div>
-                                    <label for="efternavn"><p class="p2">Efternavn*</p></label>
+                                    <label for="efternavn" class="p2">Efternavn*</label>
                                     <input type="text" id="efternavn" class="inputbox" placeholder="Andersen">
                                 </div>
                                 <div>
-                                    <label for="email"><p class="p2">Email*</p></label>
+                                    <label for="email" class="p2">Email*</label>
                                     <input type="email" id="email" class="inputbox" placeholder="andersandersen@mail.dk">
                                 </div>
                                 <div>
-                                    <label for="mobilnummer"><p class="p2">Mobilnummer*</p></label>
+                                    <label for="mobilnummer" class="p2">Mobilnummer*</label>
                                     <div id="mobilinput">
                                         <!--Start dropdown-->
                                         <div>
-                                            <button onclick="landDropdown()" class="dropbtn" id="dropdownButton"> 
+                                            <a onclick="landDropdown()" class="dropbtn" id="dropdownButton"> 
                                                 <div class="buttonIndhold">
                                                     <span id="selectedCountry">
-                                                        <img src="images/flagicon/dkflagicon.png" alt="Denmark flag">
+                                                        <img src="images/flagicon/dkflagicon.png" alt="Denmark flag" loading="lazy">
                                                     </span>
                                                     <i class="fas fa-angle-down"></i>
                                                 </div>
-                                            </button>                                       
-                                                <div id="listDropdown" class="dropdownIndhold">
-                                                    
-                                                    <a href="#" onclick="selectCountry('images/flagicon/dkflagicon.png', event)" >
-                                                        <div class="landInfo">
-                                                        <img src="images/flagicon/dkflagicon.png" alt="Danmark flag">
-                                                        <p>(+45)</p>
-                                                        </div>
-                                                    </a>
+                                            </a>                                       
+                                            <div id="listDropdown" class="dropdownIndhold">
+                                                <a href="#" onclick="selectCountry('images/flagicon/dkflagicon.png', event)" >
+                                                    <div class="landInfo">
+                                                    <img src="images/flagicon/dkflagicon.png" alt="Danmark flag" loading="lazy">
+                                                    <p>(+45)</p>
+                                                    </div>
+                                                </a>
 
-                                                    <a id="sverige" href="#" onclick="selectCountry('images/flagicon/seflagicon.png', event)">
-                                                        <div class="landInfo">
-                                                        <img src="images/flagicon/seflagicon.png" alt="Sverige flag">
-                                                        <p>(+46)</p>
-                                                        </div>
-                                                    </a>
-                            
-                                                    <a href="#" onclick="selectCountry('images/flagicon/noflagicon.png', event)">
-                                                        <div class="landInfo">
-                                                        <img src="images/flagicon/noflagicon.png" alt="Norge flag">
-                                                        <p>(+47)</p>
-                                                        </div>
-                                                    </a>
+                                                <a id="sverige" href="#" onclick="selectCountry('images/flagicon/seflagicon.png', event)">
+                                                    <div class="landInfo">
+                                                    <img src="images/flagicon/seflagicon.png" alt="Sverige flag" loading="lazy">
+                                                    <p>(+46)</p>
+                                                    </div>
+                                                </a>
+                        
+                                                <a href="#" onclick="selectCountry('images/flagicon/noflagicon.png', event)">
+                                                    <div class="landInfo">
+                                                    <img src="images/flagicon/noflagicon.png" alt="Norge flag" loading="lazy">
+                                                    <p>(+47)</p>
+                                                    </div>
+                                                </a>
 
-                                                    <a class="land" href="#" onclick="selectCountry('images/flagicon/icflagicon.png', event)">
-                                                        <div class="landInfo">
-                                                        <img src="images/flagicon/icflagicon.png" alt="Island flag">
-                                                        <p>(+354)</p>
-                                                        </div>
-                                                    </a>
+                                                <a class="land" href="#" onclick="selectCountry('images/flagicon/icflagicon.png', event)">
+                                                    <div class="landInfo">
+                                                    <img src="images/flagicon/icflagicon.png" alt="Island flag" loading="lazy">
+                                                    <p>(+354)</p>
+                                                    </div>
+                                                </a>
 
-                                                    <a  href="#" onclick="selectCountry('images/flagicon/fiflagicon.png', event)">
-                                                        <div class="landInfo">
-                                                        <img src="images/flagicon/fiflagicon.png" alt="Findland flag">
-                                                        <p>(+358)</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                          </div>
-                                          <!--Slut dropdown-->                                          
+                                                <a  href="#" onclick="selectCountry('images/flagicon/fiflagicon.png', event)">
+                                                    <div class="landInfo">
+                                                    <img src="images/flagicon/fiflagicon.png" alt="Finland flag" loading="lazy">
+                                                    <p>(+358)</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!--Slut dropdown-->                                          
                                         <input type="tel" id="mobilnummer" class="inputbox" placeholder="00000000">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="inputknapper">
-                            <div class="check">
-                                <input type="checkbox" class="checkbox">
-                                <p class="p2">Jeg ønsker at modtage underskriftsindsamlinger via SMS eller mail. Afmeld til enhver tid ved at kontakte medlemsservice.</p>
+                            <div id="inputknapper">
+                                <div class="check">
+                                    <input type="checkbox" class="checkbox">
+                                    <p class="p2">Jeg ønsker at modtage underskriftsindsamlinger via SMS eller mail. Afmeld til enhver tid ved at kontakte medlemsservice.</p>
+                                </div>
+                                <div class="check">
+                                    <input type="checkbox" class="checkbox">
+                                    <p class="p2">Jeg accepterer Terms of Service og privatlovspolitik. Læs mere om vores persondatapolitik <a href="#" class="hyperlink">her.</a></p>
+                                </div>
+                                <a class="primary" id="stretch" onclick="openPopupSuccess()"><p class="c1">Tilmeld dig</p></a>
+                                <div class="success" id="success">
+                                    <div id="successcheck">
+                                        <i class="fa-regular fa-circle-check fa-2xl" style="color: #000000;"></i>  
+                                    </div>
+                                    <div id="successcontent">
+                                        <div id="successtext">
+                                            <h2>Tak for din tilmelding</h2>
+                                            <p class="p2">Din underskrift gør en forskel</p>
+                                        </div>
+                                        <a class="primary" onclick="closePopupSuccess()"><p class="c1" onclick="closePopupSuccess()">OK</p></a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="check">
-                                <input type="checkbox" class="checkbox">
-                                <p class="p2">Jeg accepterer Terms of Service og privatlovspolitik. Læs mere om vores persondatapolitik <a href="#" class="hyperlink">her.</a></p>
-                            </div>
-                            <button class="primary" id="strechbtn"><a href="#" class="c1">Tilmeld dig</a></button>
                         </div>
-                </div>
+                        <div id="oplysninger">
+                            <h3>Om dine oplysninger</h3>
+                            <p class="p2">Når du skriver under på Lifeline-sager her på amnesty.dk, beder vi om:</p>
+                            <div id="oplysningericons">
+                                <div class="oplysicon">
+                                    <i class="fa-regular fa-envelope fa-xl" style="color: #000000;"></i>
+                                    <p class="p2">Mailadresse</p>
+                                    </div>
+                                    <div class="oplysicon">
+                                        <i class="fa-solid fa-phone fa-xl" style="color: #000000;"></i>
+                                        <p class="p2">Mobilnummer</p>
+                                    </div>
+                            </div>
+                            <p class="p2">Det gør vi for at kunne verificere, at din underskrift er unik. Skriver du under flere gange, tæller du altså kun én gang. <br>Dit mobilnummer eller e-mail kommer <b>aldrig</b> med på underskriftslisterne. Her skriver vi kun dit fornavn eller “anonym”, hvis vi ikke kender det.</p>
+                            <div class="tertiary slide-effect">
+                                <a href="https://amnesty.dk/om-os/sejre/" class="c1">Se flere resultater</a>
+                                <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="imgcontentblock">
                     <div class="text">
@@ -235,27 +257,24 @@
                 </div>
                 <!--NADIALIVA-->
                 <div class="full-slider">
-
                     <!-- NAV BUTTONS -->
                     <div class="nav-buttons">
-                        <button class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-chevron-left fa-xs" style="color: #000000;"></i></button> 
-                        <button class="next" onclick="plusSlides(1)"><i class="fa-solid fa-chevron-right fa-xs" style="color: #000000;"></i></button> 
+                        <div class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-chevron-left fa-xs" style="color: #000000;"></i></div> 
+                        <div class="next" onclick="plusSlides(1)"><i class="fa-solid fa-chevron-right fa-xs" style="color: #000000;"></i></div> 
                     </div>
 
                     <!--IMAGES & TEXT-->
                     <div class="slider-contents">  
-
                         <div class="slider">
 
-                            <div class="quote">
-                                <img src="images/vaadin_quote-right.png" alt="quote">
-                            </div>
-
                             <div class="slider-image">
-                                <img src="images/magai.png" alt="Image">
+                                <img src="images/magai.png" alt="Magai Matiop Happily Reunited" loading="lazy">
                             </div>
 
                             <div class="slider-text">
+                                <div class="quote">
+                                    <img src="images/vaadin_quote-right.png" alt="Quotation Marks" loading="lazy">
+                                </div>
                                 <h3>Mange tak. Jeg har ingen ord.
                                     Du har ingen idé om, hvor
                                     meget mit hjerte er fyldt med glæde.</h3>
@@ -265,25 +284,24 @@
                                     verden skrev under, sendte breve og tweetede, hvor de opfordrede til, at
                                     myndighederne i Sydsudan skulle skåne Magais liv – og det virkede!
                                 </p>
-                                <button class="tertiary slide-effect">
+                                <div class="tertiary slide-effect">
                                     <a href="https://amnesty.dk/om-os/sejre/" class="c1">Se flere resultater</a>
                                     <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
-                                </button>
+                                </div>
                             </div>
 
                         </div>
 
                         <div class="slider">
 
-                            <div class="quote">
-                                <img src="images/vaadin_quote-right.png" alt="quote">
-                            </div>
-
                             <div class="slider-image">
-                                <img src="images/erika.png" alt="Image">
+                                <img src="images/erika.png" alt="Erika and friends Happy in a crowd" loading="lazy">
                             </div>
 
                             <div class="slider-text">
+                                <div class="quote">
+                                    <img src="images/vaadin_quote-right.png" alt="Quotation Marks" loading="lazy">
+                                </div>
                                 <h3>Vi fejrer denne afgørelse som en
                                     historisk sejr ...</h3>
                                 <h5>- Erika Guevara-Rosas</h5>
@@ -291,25 +309,24 @@
                                     graviditet skal afkriminaliseres. En stor sejr for menneskerettighederne, mener
                                     Amnesty International.
                                 </p>
-                                <button class="tertiary slide-effect">
+                                <div class="tertiary slide-effect">
                                     <a href="https://amnesty.dk/om-os/sejre/" class="c1">Se flere resultater</a>
                                     <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
-                                </button>
+                                </div>
                             </div>
 
                         </div>
 
                         <div class="slider">
 
-                            <div class="quote">
-                                <img src="images/vaadin_quote-right.png" alt="quote">
-                            </div>
-
                             <div class="slider-image">
-                                <img src="images/bernardo.png" alt="Image">
+                                <img src="images/bernardo.png" alt="Bernardo Happily reuinted with his family" loading="lazy">
                             </div>
 
                             <div class="slider-text">
+                                <div class="quote">
+                                    <img src="images/vaadin_quote-right.png" alt="Quotation Marks" loading="lazy">
+                                </div>
                                 <h3>Amnesty International gav mig
                                     håb om, at jeg kunne blive
                                     løsladt, og nu er jeg fri.</h3>
@@ -318,10 +335,10 @@
                                     Guatemala, blev idømt syv års fængsel for at protestere mod myndighedernes planer
                                     om at bygge et vandkraftværk på floder der er betydningsfulde for Mayaerne.
                                 </p>
-                                <button class="tertiary slide-effect">
+                                <div class="tertiary slide-effect">
                                     <a href="https://amnesty.dk/om-os/sejre/" class="c1">Se flere resultater</a>
                                     <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
-                                </button>
+                                </div>
                             </div>
 
                         </div>
@@ -329,9 +346,9 @@
 
                     <!--NAV DOTS-->
                     <div class="nav-dots">
-                    <span class="dot active" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
                 <!-- TONNY ACCORDION -->
@@ -339,34 +356,34 @@
                     <div class="content">
                         <h2>Spørgsmål og svar</h2>
                         <div class="accordions">
-                            <button class="accordion" id="top"><h5>Jeg har skrevet under to gange. Får myndighederne så flere af den samme underskrift?</h5><i class="fa-solid fa-plus"></i></button>
+                            <div class="accordion" id="top"><h5>Jeg har skrevet under to gange. Får myndighederne så flere af den samme underskrift?</h5><i class="fa-solid fa-plus"></i></div>
                                 <div class="panel">
                                     <p class="p2">Vi tjekker altid underskrifterne igennem for dubletter, så der kun sendes én pr unik underskriver, så det gør hverken fra eller til, hvis du skriver under to gange.</p>
                                 </div>                            
-                            <button class="accordion"><h5>Hvordan kan jeg undgå at blive ringet op bagefter?</h5><i class="fa-solid fa-plus"></i></button>
+                            <div class="accordion"><h5>Hvordan kan jeg undgå at blive ringet op bagefter?</h5><i class="fa-solid fa-plus"></i></div>
                                 <div class="panel">
                                     <p class="p2">Vi har brug for at kunne identificere dig som unik underskriver. Derfor har vi valgt at bruge e-mail og telefonnummer som identifikation på alle Amnestys formularer. Nederst i formularen er der et permission-felt. Hvis du ikke sætter flueben her, bliver du ikke kontaktet mere.</p>
                                 </div>
                             
-                            <button class="accordion"><h5>Hvorfor skal jeg acceptere nødvendige cookies?</h5><i class="fa-solid fa-plus"></i></button>
+                            <div class="accordion"><h5>Hvorfor skal jeg acceptere nødvendige cookies?</h5><i class="fa-solid fa-plus"></i></div>
                                 <div class="panel">
                                     <p class="p2">Nogle bruges til statistik, mens andre er fra tredjepartstjenester. Vi benytter cookies for at optimere hjemmesiden og brugsvenligheden for alle.</p>
                                 </div>
                             
-                            <button class="accordion"><h5>Hvorfor modtager jeg aktioner via mail, når jeg tidligere har modtaget dem på sms?</h5><i class="fa-solid fa-plus"></i></button>
+                            <div class="accordion"><h5>Hvorfor modtager jeg aktioner via mail, når jeg tidligere har modtaget dem på sms?</h5><i class="fa-solid fa-plus"></i></div>
                                 <div class="panel">
                                     <p class="p2">Når du vælger at få aktionerne via e-mail, får du mere information om dem, vi aktionerer for. Du får også mere information om, hvad der sker med din underskrift og hvilke resultater din underskrift er med til at skabe for menneskerettighederne.
 
                                         Samtidig sparer vi en masse penge på sms’er, som vi i stedet kan bruge på at undersøge krænkelser og påvirke magthavere til at overholde menneskerettighederne. Det koster nemlig 19 øre, hver gang vi sender en sms, og når vi sender ud til omkring 200.000 personer, så løber det hurtigt op. Derfor vil vi hellere sende aktionerne via mail, hvor det er gratis.</p>
                                 </div>
                             
-                            <button class="accordion"><h5>Hvordan afmelder jeg mig Lifeline?</h5><i class="fa-solid fa-plus"></i></button>
+                            <div class="accordion"><h5>Hvordan afmelder jeg mig Lifeline?</h5><i class="fa-solid fa-plus"></i></div>
                                 <div class="panel">
                                     <p class="p2">Du kan vælge at ringe eller skrive til medlemsservice. Ved at oplyse dit mobilnummer eller mailadresse får de dig fjernet fra listen.</p><br>
-                                    <button class="tertiary slide-effect">
+                                    <div class="tertiary slide-effect">
                                         <a href="https://amnesty.dk/kontakt-os/spoergsmaal-om-medlemskab/" class="c1">Kontakt medlemsservice</a>
                                         <i class="fa-solid fa-chevron-right" style="transform: translateY(1.5px);"></i>
-                                    </button>
+                                    </div>
                                 </div>
                         </div>
 
@@ -375,15 +392,12 @@
 
             </div>
         </div>
-
-
     </main>
-    <footer> <!-- DENNIS -->
-        <div class="entirefooter">
-            
+    <footer>
+        <div class="footertoprow">
             <div class="footercolumn">
-                <h4> STØT </h4>
-
+                <h4>STØT</h4>
+                <hr>
                 <div class="footerlinks">
                     <a href="#">Bliv medlem</a>
                     <a href="#">Giv et engangsbidrag</a>
@@ -394,7 +408,7 @@
             
             <div class="footercolumn">
                 <h4> VÆR MED </h4>
-
+                <hr>
                 <div class="footerlinks">
                 <a href="#">Landsmøde</a>
                 <a href="#">Skriv under</a>
@@ -408,7 +422,7 @@
 
             <div class="footercolumn">
                 <h4> VORES ARBEJDE</h4>
-
+                <hr>
                 <div class="footerlinks">
                 <a href="#">Ytringsfrihed</a>
                 <a href="#">Forsamlingsfrihed</a>
@@ -424,6 +438,7 @@
 
             <div class="footercolumn">
                 <h4> NYHEDER </h4>
+                <hr>
                 <div class="footerlinks">
                     <a href="#">Amnesty Lyd</a>
                     <a href="#">Hørringssvar & Breve</a>
@@ -433,34 +448,28 @@
 
             <div class="footercolumn">
                 <h4> KONTAKT OS </h4>
-                <div class="contactinfo">
-                    <p class="p2">Amnesty International Danmark<br>
+                <hr>
+                <p class="p2">Amnesty International Danmark<br>
                         Tlf: +45 33 45 66 65<br>
                         Gammeltorv 8, 5. sal, 1457 København K<br>
                         Åbningstider: mandag-torsdag kl. 13:00 - 16:00<br><br>
-                        <div>CVR: 21 53 94 14</div><br>
-                    </p2>
-                </div>
-                <c1 href="#"> Støt Vores Arbejde</c1> <!--CTA BUTTON FOOTER-->
+                        CVR: 21 53 94 14<br></p>
+                <a href="#tilmeldblock" class="primarywhite"><p class="c1">STØT VORES ARBEJDE</p></a>
+                <!--CTA BUTTON FOOTER-->
             </div>
-
-            <div class="footerbottomrow">
-                
-                <div id="copyright">
-                        <p2 class="p2"> © 2024 Amnesty International</p2>
+        </div>
+        <hr>
+        <div class="footerbottomrow">
+            <p class="p2">© 2024 Amnesty International</p>
+            <div class="follow">
+                <h4>FOLLOW US ON:</h4>
+                <div id="some">
+                    <a href="#" target="_blank"><i class="fa-brands fa-facebook fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a> 
                 </div>
-                <div class="follow">
-                    <h4>FOLLOW US ON:</h4>
-                    <div id="some">
-                        <a href="#" target="_blank"><i class="facebook logo"></i></a>
-                        <a href="#" target="_blank"><i class="twitter logo"></i></a>
-                        <a href="#" target="_blank"><i class="instagram logo"></i></a>  
-                    </div>    
-                </div>
-
             </div>
         </div>
     </footer> 
-    <script src="scripts.js"></script>
 </body>
 </html>
